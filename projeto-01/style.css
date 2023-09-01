@@ -4,6 +4,9 @@ body {
     margin: 0;
     font-family: 'noto Sans', sans-serif;
 }
+body * {
+    box-sizing: border-box;
+}
 main {
     width: 100vw;
     height: 100vh;
@@ -21,7 +24,8 @@ main {
     flex-direction: column;
 }
 #left-login > h1 {
-color: #77ffc0;;
+    font-size: 3vw;
+    color: #77ffc0;
 }
 #right-login {
     width: 50vw;
@@ -92,4 +96,31 @@ color: #77ffc0;;
 .btn-longi:active {
     background-color:#045831;
     color: white;
+}
+#left-img {
+    width: 25vw;
+}
+@media only screen and (max-width: 950px) {
+    #card-login {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    main{
+        flex-direction: column;
+    }
+    #left-login > h1{
+        display: none;
+    }
+    #left-login {
+        width: 50%;
+        height: auto;
+    }
+    #right-login {
+        width: 100%;
+        height: auto;
+    }
+    #left-img {
+        width: 100%;
+    }
 }
